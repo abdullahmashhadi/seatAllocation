@@ -1,11 +1,15 @@
 from flask import Flask, request, render_template, jsonify
 from pymongo import MongoClient
 from flask_socketio import SocketIO, emit
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
-client = MongoClient("mongodb+srv://abdullah6blue:RFMv0wxcMsCddGj8@cluster0.2cjvid1.mongodb.net/")
+load_dotenv()
+mongodb_uri = os.getenv("MONGODB_URI")
+client = MongoClient(mongodb_uri)
 db = client.seat_booking
 seats_collection = db.seats
 
