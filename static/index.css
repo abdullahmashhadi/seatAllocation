@@ -1,0 +1,48 @@
+.seat {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.male {
+  background-color: blue;
+  color: white;
+}
+.female {
+  background-color: pink;
+  color: black;
+}
+.selected {
+  background-color: orange;
+  color: white;
+}
+.available {
+  background-color: grey;
+  color: white;
+}
+.legend {
+  margin: 20px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.row-gap {
+  height: 20px;
+}
+.chat-box {
+  border: 1px solid black;
+  padding: 10px;
+  height: 300px;
+  overflow-y: scroll;
+}
